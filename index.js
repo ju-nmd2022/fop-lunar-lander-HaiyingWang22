@@ -1,3 +1,5 @@
+// Reference from Garrit
+// https://pixelkind.github.io/foundationsofprogramming/programming/15-07-example
 const Max_width = 600;
 const Max_height = 600;
 let speed; 
@@ -296,14 +298,11 @@ function start(){
     text("Starfield", cx, cy); 
     pop();  
     textSize(12);
-
     text("land the craft with a speed of less than 40m/s." , cx, cy+300);
     text( "Use caution with limited fuel", cx, cy+320); 
     textSize(15);
     text("Click on the screen to start the game", cx, cy+200); 
-
     pop(); 
-    
 }  
 function basic_condition(){
     y = 20;  
