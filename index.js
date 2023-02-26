@@ -56,7 +56,7 @@ function move(){
             if (keyIsDown(32)){
                 Fuel_func(); 
                 G -= 0.001; 
-                if(large<=15){ //给个条件控制火焰的大小
+                if(large<=15){
                     large += 1; 
                 }
             }
@@ -236,7 +236,6 @@ function Text_of_ship_condition(){
 // fuel calculate
 function Fuel_func(){
         fuel-=1;                
-        // console.log(fuel);  
 }
 
 // judge
@@ -247,7 +246,7 @@ function judge(){
     textFont();
     textAlign(CENTER);
     textSize(45);
-    text("Mission accomplished! :)", cx, cy);  
+    text("Mission Complete! :)", cx, cy);  
     push();
     textSize(15);
     text("Click on the screen to restart the game", cx, cy+100); 
@@ -262,7 +261,7 @@ function judge(){
     textFont();
     textAlign(CENTER);
     textSize(45);
-    text("Mission failed :(", cx, cy);    
+    text("Mission Failed :(", cx, cy);    
     push();  
     textSize(15);
     text("Click on the screen to restart the game", cx, cy+100); 
