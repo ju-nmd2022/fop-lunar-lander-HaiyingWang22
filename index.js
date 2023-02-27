@@ -64,13 +64,11 @@ function Speed(y){
 }
 
 // move  
-function move(){     
-                   
+function move(){            
     if(y<520){  
         Text_of_ship_condition();
         y *= G;  
-        if(fuel>0){
-                         
+        if(fuel>0){        
             if (keyIsDown(32)){
                 Fuel_func(); 
                 G -= 0.001; 
@@ -97,8 +95,6 @@ function move(){
     else{ 
         large = 0;  
     }
-    
-    
 } 
      
 // carft
@@ -246,14 +242,15 @@ function Text_of_ship_condition(){
     push();
     textSize(15);
     text("Speed :"+Math.floor(Math.abs(speed))+"m/s", cx-250, cy-200); 
-    text("Fuel :"+Math.floor(fuel)+"%", cx-250, cy-180);  
- 
+    text("Fuel :"+Math.ceil(fuel)+"%", cx-250, cy-180);  
     pop();
 }
 
 // fuel calculate
 function Fuel_func(){
+    if(fuel>0){ 
         fuel-=0.75;                
+    }
 }
 
 // judge
@@ -270,9 +267,6 @@ function judge(){
     text("Click on the screen to restart the game", cx, cy+100); 
     pop(); 
     pop(); 
-
-     
-    
     } else if(y>=520){
     push();
     fill(255, 255, 255);
@@ -285,7 +279,6 @@ function judge(){
     text("Click on the screen to restart the game", cx, cy+100); 
     pop(); 
     pop();    
-
     }
 }
 
