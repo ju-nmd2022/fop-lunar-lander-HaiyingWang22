@@ -1,18 +1,18 @@
-// Reference from Garrit
-// https://pixelkind.github.io/foundationsofprogramming/programming/15-07-example
-const Max_width = 600;
-const Max_height = 600;
-let speed; 
-const g = 1.03;
-let y ; 
-let G ;   
-let large;  
-let fuel;
-
-    
 // center point
 const cx = 300; 
 const cy = 300; 
+const Max_width = 600;
+const Max_height = 600;
+let speed; 
+// Standard gravity parameter
+const g = 1.03;
+// Variable gravity parameter
+let G ; 
+// carft variable y position
+let y ; 
+// Parameter for flame volume 
+let large;  
+let fuel;
 // Game condition 1 means running 0 means not running
 let condition= 0;
 // for star x, y position size and light
@@ -20,7 +20,9 @@ let sx = [];
 let sy = [];  
 let ss = []; 
 let sa = [];  
-       
+// Reference from Garrit
+// https://pixelkind.github.io/foundationsofprogramming/programming/15-07-example
+     
               
 // main program
 basic_condition();
@@ -32,6 +34,8 @@ function draw(){
     static_scene();
     check(); 
 }  
+
+// mouse click function
 function mouseClicked(){
     if(condition === 0){
         condition = 1;
@@ -40,6 +44,7 @@ function mouseClicked(){
         basic_condition();
     }
 } 
+
 //  speed coculate 
 function Speed(y){
     speed = (y - y/G)*10; 
@@ -47,7 +52,8 @@ function Speed(y){
 
     return speed;
 }
-// move program 
+
+// move  
 function move(){     
                    
     if(y<520){  
@@ -85,7 +91,7 @@ function move(){
     
 } 
      
-// ship 
+// carft
 function ship(){
     push(); 
     fill(255,255,255);
@@ -237,7 +243,7 @@ function Text_of_ship_condition(){
 
 // fuel calculate
 function Fuel_func(){
-        fuel-=1;                
+        fuel--;                
 }
 
 // judge
@@ -272,9 +278,7 @@ function judge(){
 
     }
 }
-    
 
- 
 // game condition check
 function check(){  
     if(condition === 1){
