@@ -71,9 +71,9 @@ function move(){
         if(fuel>0){        
             if (keyIsDown(32)){
                 Fuel_func(); 
-                G -= 0.001; 
+                G -= 0.00075; 
                 if(large<=15){
-                    large += 1; 
+                    large ++; 
                 }
             }
             else if(G < g){   
