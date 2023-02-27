@@ -1,3 +1,9 @@
+// Reference from Garrit and Github
+// https://pixelkind.github.io/foundationsofprogramming/programming/15-07-example
+//  https://github.com/processing/p5.js/wiki/Positioning-your-canvas
+  
+
+
 // center point
 const cx = 300; 
 const cy = 300; 
@@ -5,7 +11,7 @@ const Max_width = 600;
 const Max_height = 600;
 let speed; 
 // Standard gravity parameter
-const g = 1.03;
+const g = 1.02;
 // Variable gravity parameter
 let G ; 
 // carft variable y position
@@ -17,16 +23,20 @@ let fuel;
 let condition= 0;
 // for star x, y position size and light
 let sx = [];
-let sy = [];  
+let sy = [];   
 let ss = []; 
 let sa = [];  
-// Reference from Garrit
-// https://pixelkind.github.io/foundationsofprogramming/programming/15-07-example
-     
-              
+
+
+// setting screen style
+function setup(){
+    createCanvas(600,700);
+}
+
 // main program
 basic_condition();
 Stars();  
+
 function draw(){  
     clear();
     background(29, 29, 29);  
@@ -243,7 +253,7 @@ function Text_of_ship_condition(){
 
 // fuel calculate
 function Fuel_func(){
-        fuel--;                
+        fuel-=0.75;                
 }
 
 // judge
@@ -310,9 +320,9 @@ function start(){
 }  
 function basic_condition(){
     y = 20;  
-    G = 1.03;   
+    G = 1.02;   
     large = 0;  
     fuel = 100;
     condition= 0;
 } 
-
+ 
